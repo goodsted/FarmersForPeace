@@ -19,10 +19,10 @@ export default function MobileMenu() {
     setOpen(false);
   };
   const menu = [
-      { link: '/host', text: 'I want to host' },
-      { link: '/need-help', text: 'I need help' },
-      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', text: 'Volunteer' },
-      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', text: 'Contact Us' },
+      { link: '/host', text: 'I want to host',external:false },
+      { link: '/need-help', text: 'I need help',external:false },
+      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external:true,text: 'Volunteer' },
+      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external:true,text: 'Contact Us' },
       { link: '/terms-and-conditions', text: 'Terms & Conditions' }
 ];
   const menuLinkStyle = { textDecoration: 'none', color: '#fff', fontSize: 28, fontWeight: 700, lineHeight: '68px', fontFamily: "'Pragati Narrow',sans-serif" };
@@ -62,15 +62,25 @@ export default function MobileMenu() {
         </Grid>
         <Grid container flexDirection="column" sx={{ p: 3, bgcolor: 'primary.main', height: '100%' }}>
           {menu.map((item, index) => {
-            return (
-              <Link href={item.link} key={index} passHref>
-                <a style={{ textDecoration: 'none' }}>
-                  <Typography variant="link" sx={menuLinkStyle}>
-                  {item.text}
-                  </Typography>
-                </a>
-              </Link>
-            );
+            if(item.external){
+              return (
+                  <a href={item.link} style={{ textDecoration: 'none' }}>
+                    <Typography variant="link" sx={menuLinkStyle}>
+                    {item.text}
+                    </Typography>
+                  </a>
+              );
+            }else{
+              return (
+                <Link href={item.link} key={index} passHref>
+                  <a style={{ textDecoration: 'none' }}>
+                    <Typography variant="link" sx={menuLinkStyle}>
+                    {item.text}
+                    </Typography>
+                  </a>
+                </Link>
+              );
+            }
           })}
         </Grid>
       </Dialog>

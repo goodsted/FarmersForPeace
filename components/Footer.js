@@ -37,12 +37,12 @@ function Footer({ home }) {
           <Grid item>
             <Grid container columnSpacing={3}>
               <Grid item>
-                <MuiLink href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
+                <MuiLink target="_blank" href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
                   Volunteer
                 </MuiLink>
               </Grid>
               <Grid item>
-                <MuiLink href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
+                <MuiLink target="_blank" href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
                   Contact Us
                 </MuiLink>
               </Grid>
