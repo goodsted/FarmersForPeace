@@ -11,7 +11,7 @@ const Theme = createTheme({
           fontWeight: 600,
           lineHeight: "24px",
           borderWidth: 2,
-          padding: 16,
+          padding: '16px 64px',
           textTransform: "initial",
         },
         outlinedPrimary: {
@@ -60,10 +60,11 @@ const Theme = createTheme({
       fontFamily:"'Pragati Narrow', sans-serif",
       fontWeight: 700,
     },
-    body2:{
+    body1:{
       fontSize: 16,
       fontWeight:500,
       lineHeight: 2,
+      color: "#10243E",
     },
     link:{
       fontSize: 16,
