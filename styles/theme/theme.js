@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 const font = "'Poppins','Roboto', sans-serif";
-
+const primaryColor = "#1E3F86";
 const Theme = createTheme({
   components:{
     MuiButton:{
@@ -16,11 +16,24 @@ const Theme = createTheme({
         },
         outlinedPrimary: {
           backgroundColor: "#fff",
-          borderColor: "#1E3F86",
+          borderColor: primaryColor,
+          '&:hover': {
+            border: `2px solid ${primaryColor}`,
+          },
         },
         contained: {
           boxShadow: 'none',
+          borderWidth: 2,
+          borderColor:'inherit',
+          borderStyle:"solid",
+          '&:hover': {
+            boxShadow: 'none',
+          },
         },
+        containedPrimary: {
+          boxShadow: 'none',
+          borderColor:primaryColor,
+        }
       }
     }
   },
@@ -54,7 +67,7 @@ const Theme = createTheme({
     },
     link:{
       fontSize: 16,
-      fontWeight:600,
+      fontWeight:500,
       lineHeight:1.2
     }
   }

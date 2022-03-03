@@ -33,7 +33,8 @@ export default function Home() {
               height="480"
             ></iframe>
           </Grid>
-          <Grid item xs={12} md={5.4} sx={{ p: 8, pt: { md: 10 },height:'100%',overflowY:'scroll', }}>
+          <Grid item xs={12} md={5.4} sx={{ pr: 8,pl: 8, pt: { md: 10 },height:'100%',overflowY:'scroll', }}>
+            <Grid container sx={{pb: 4}}>
             <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
               Action for Ukraine
             </Typography>
@@ -45,16 +46,21 @@ export default function Home() {
               spring season.
             </Typography>
             <Typography variant="body2" sx={{ mb: 2 }}>
-              If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&#39ll appear on the map for those looking to find a safe space.
+              If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&apos;ll appear on the map for those looking to find a safe space.
             </Typography>
+            </Grid>
             <Grid
               container
               justifyContent="space-between"
-              spacing={4}
+              spacing={3}
+              columnSpacing={4}
               sx={{
-                mt: { md: 10 },
+                pb:4,
                 borderTop: 1,
                 borderColor: 'grey.middle',
+                background: '#fff',
+                position: 'sticky',
+                bottom: 0,
               }}
             >
               <Grid item xs={6}>
