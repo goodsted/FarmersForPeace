@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 
 export default function NeedHelpPage() {
   return (
-    <Layout>
+    <Layout bgColor="#EBF3FE">
       <Typography variant="h1" color="primary" align="center" sx={{ mb: 3 }}>
         I want to host
       </Typography>

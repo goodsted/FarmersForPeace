@@ -19,7 +19,10 @@ const Theme = createTheme({
           borderColor: primaryColor,
           '&:hover': {
             border: `2px solid ${primaryColor}`,
+            backgroundColor: primaryColor,
+          color: "#fff",
           },
+          
         },
         contained: {
           boxShadow: 'none',
@@ -63,6 +66,10 @@ const Theme = createTheme({
     body1:{
       fontSize: 16,
       fontWeight:500,
+      lineHeight: 2,
+      color: "#10243E",
+    },
+    body2:{
       lineHeight: 2,
       color: "#10243E",
     },

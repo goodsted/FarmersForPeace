@@ -4,7 +4,7 @@ import Layout from '../../components/Layout'
 
 export default function NeedHelpPage() {
   return (
-    <Layout>
+    <Layout bgColor="#EBF3FE">
       <Typography variant="h1" color="primary" align="center" sx={{ mb: 4 }}>
         I need help
       </Typography>

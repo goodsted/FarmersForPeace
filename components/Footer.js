@@ -2,15 +2,18 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import MuiLink from '@mui/material/Link';
+import Link from 'next/link';
 function Footer({ home }) {
   return (
     <AppBar position={home ? 'fixed' : 'static'} component="footer" sx={{ bottom: 0, top: 'unset', height: 'min-content' }}>
       <Toolbar sx={{ p: 2 }}>
         <Grid container justifyContent="space-between">
           <Grid item>
-            <Link href="#" color="inherit" variant="link">
+            <Link href="/terms-and-conditions" passHref>
+            <MuiLink  color="inherit" variant="link">
               Terms & Conditions
+            </MuiLink>
             </Link>
           </Grid>
           <Grid item>
@@ -19,23 +22,23 @@ function Footer({ home }) {
                 <Typography variant="link">This site is open source</Typography>
               </Grid>
               <Grid item>
-                <Link href="#" color="inherit" variant="link">
+                <MuiLink href="#" color="inherit" variant="link">
                   Contribute
-                </Link>
+                </MuiLink>
               </Grid>
             </Grid>
           </Grid>
           <Grid item>
             <Grid container columnSpacing={3}>
               <Grid item>
-                <Link href="#" color="inherit" variant="link">
+                <MuiLink href="#" color="inherit" variant="link">
                   Volunteer
-                </Link>
+                </MuiLink>
               </Grid>
               <Grid item>
-                <Link href="#" color="inherit" variant="link">
+                <MuiLink href="#" color="inherit" variant="link">
                   Contact Us
-                </Link>
+                </MuiLink>
               </Grid>
             </Grid>
           </Grid>

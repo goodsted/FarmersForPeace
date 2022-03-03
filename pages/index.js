@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Farmers for Peace</title>
-        <meta name="description" content="Farmers for Peace - Action for Ukraine" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Action for Ukraine | Farmers for Peace</title>
+        <meta name="description" content="We connect EU farmers and others who have space with refugees from Ukraine who need a home until the crisis ends. Share your space and we'll put it on the map." />
+        <link rel="icon" href="/favicon2.ico" />
       </Head>
       <Header home />
       <main>
@@ -18,7 +18,7 @@ export default function Home() {
           container
           sx={{
             height: 'calc(100vh - 64px)',
-            pt: 12,
+            pt: 12.5,
             overflowY: 'scroll',
           }}
         >
