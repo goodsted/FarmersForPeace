@@ -2,7 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
-import { Grid, Typography,Button } from '@mui/material';
+import Footer from '../components/Footer';
+import { Grid, Typography, Button } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+
 export default function Home() {
   return (
     <div>
@@ -14,46 +18,53 @@ export default function Home() {
       <Header />
       <main>
         <Grid container>
-          <Grid item xs={12} md={6.6} >
-            <iframe style={{ width: '100%', height: '100%', border:'none' }} src="https://www.google.com/maps/d/embed?mid=1TeCb8jRoqNP0e5q8i45_2wjxkPR2Xvq7&ehbc=2E312F&zoom=10" width="640" height="480"></iframe>
+          <Grid item xs={12} md={6.6}>
+            <iframe
+              style={{ width: '100%', height: '100%', border: 'none' }}
+              src="https://www.google.com/maps/d/embed?mid=1TeCb8jRoqNP0e5q8i45_2wjxkPR2Xvq7&ehbc=1E3F86&z=4&ll=50.10205150020149, 14.439702489449177"
+              width="640"
+              height="480"
+            ></iframe>
           </Grid>
-          <Grid item xs={12} md={5.4} sx={{ p:8,pt:{md:13} }}>
-            <Typography variant="h1" color="primary" sx={{mb: 6}}>
+          <Grid item xs={12} md={5.4} sx={{ p: 8, pt: { md: 10 } }}>
+            <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
               Action for Ukraine
             </Typography>
-            <Typography variant="body2" sx={{mb:3}}>
+            <Typography variant="body2" sx={{ mb: 2 }}>
               A lot of people may need to leave Ukraine in the near future and all of them need a place to stay, an activity to do and most of all loving human connections.
-    
             </Typography>
-            <Typography variant="body2" sx={{mb:3}}>
+            <Typography variant="body2" sx={{ mb: 2 }}>
               At the same time, a lot of European farmers suffer from loneliness due to their often remote locations and they also often have trouble to find helping hands, especially in the upcoming
               spring season.
             </Typography>
-            <Typography variant="body2" sx={{mb:3 }}>
+            <Typography variant="body2" sx={{ mb: 2 }}>
               If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&#39ll appear on the map for those looking to find a safe space.
             </Typography>
-            <Grid container>
-              <Button variant="contained" color="primary">
-                I want to host
-              </Button>
-              <Button variant="outlined" color="primary">
-                I want to help
-              </Button>
-
+            <Grid
+              container
+              justifyContent="space-between"
+              spacing={4}
+              sx={{
+                mt: { md: 10 },
+                borderTop: 1,
+                borderColor: 'grey.middle',
+              }}
+            >
+              <Grid item xs={6}>
+                <Button fullWidth variant="contained" color="primary">
+                  I want to host
+                </Button>
+              </Grid>
+              <Grid item xs={6}>
+                <Button fullWidth variant="outlined" color="primary">
+                  I need help
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
-          
         </Grid>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        <Footer />
     </div>
   );
 }
