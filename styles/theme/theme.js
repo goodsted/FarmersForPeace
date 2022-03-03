@@ -70,6 +70,11 @@ const Theme = createTheme({
       fontFamily:"'Pragati Narrow', sans-serif",
       fontWeight: 700,
     },
+    h6: {
+      fontSize: 24,
+      fontFamily:"'Pragati Narrow', sans-serif",
+      fontWeight: 600,
+    },
     body1:{
       fontSize: 16,
       fontWeight:500,
@@ -77,6 +82,7 @@ const Theme = createTheme({
       color: "#10243E",
     },
     body2:{
+      fontSize: 18,
       lineHeight: 2,
       color: "#10243E",
     },

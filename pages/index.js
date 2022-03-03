@@ -3,13 +3,18 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Grid, Typography, Button } from '@mui/material';
 import Link from 'next/link';
+import { useMediaQuery } from '@mui/material';
 
 export default function Home() {
+  const smMatch = useMediaQuery('(max-width:900px)');
   return (
     <div>
       <Head>
         <title>Action for Ukraine | Farmers for Peace</title>
-        <meta name="description" content="We connect EU farmers and others who have space with refugees from Ukraine who need a home until the crisis ends. Share your space and we'll put it on the map." />
+        <meta
+          name="description"
+          content="We connect EU farmers and others who have space with refugees from Ukraine who need a home until the crisis ends. Share your space and we'll put it on the map."
+        />
         <link rel="icon" href="/favicon2.ico" />
       </Head>
       <Header home />
@@ -17,7 +22,7 @@ export default function Home() {
         <Grid
           container
           sx={{
-            height: 'calc(100vh - 64px)',
+            height: {xs:'100vh',md:'calc(100vh - 64px)'},
             pt: 12.5,
             overflowY: 'scroll',
           }}
@@ -28,7 +33,7 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <Grid item xs={12}  md={6.6}>
+            <Grid item xs={12} md={6.6} sx={{minHeight:{xs: 'calc(100% - 98px)',md:'unset'}}}>
               <iframe
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 src="https://www.google.com/maps/d/embed?mid=1TeCb8jRoqNP0e5q8i45_2wjxkPR2Xvq7&ehbc=1E3F86&z=4&ll=50.10205150020149, 14.439702489449177"
@@ -36,29 +41,38 @@ export default function Home() {
                 height="480"
               ></iframe>
             </Grid>
-            <Grid item xs={12} md={5.4} sx={{ pr: {xs: 2,md:4,lg: 8}, pl: {xs: 2,md:4,lg: 8}, pt: { md: 10 }, height: '100%', overflowY: 'scroll',display:"flex",flexDirection:"column" }}>
-              <Grid container sx={{ pb: 4 }}>
-                <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
-                  Action for Ukraine
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 2 }}>
-                  A lot of people may need to leave Ukraine in the near future and all of them need a place to stay, an activity to do and most of all loving human connections.
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 2 }}>
-                  At the same time, a lot of European farmers suffer from loneliness due to their often remote locations and they also often have trouble to find helping hands, especially in the
-                  upcoming spring season.
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 2 }}>
-                  If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&apos;ll appear on the map for those looking to find a safe space.
-                </Typography>
-              </Grid>
+            <Grid
+              item
+              xs={12}
+              md={5.4}
+              sx={{ pr: { xs: 2, md: 4, lg: 8 }, pl: { xs: 2, md: 4, lg: 8 }, pt: { md: 4 }, height: {xs: 'auto',md:'100%'}, overflowY: 'scroll', display: 'flex', flexDirection: 'column' }}
+            >
+              {!smMatch && (
+                <Grid container sx={{ pb: 2.5 }}>
+                  <Typography variant="h1" color="primary" sx={{ mb: 2 }}>
+                    Action for Ukraine
+                  </Typography>
+                  <Typography variant="body1" sx={{ mb: 2 }}>
+                    A lot of people may need to leave Ukraine in the near future and all of them need a place to stay, an activity to do and most of all loving human connections.
+                  </Typography>
+                  <Typography variant="body1" sx={{ mb: 2 }}>
+                    At the same time, a lot of European farmers suffer from loneliness due to their often remote locations and they also often have trouble to find helping hands, especially in the
+                    upcoming spring season.
+                  </Typography>
+                  <Typography variant="body1" sx={{ mb: 2 }}>
+                    If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&apos;ll appear on the map for those looking to find a safe space.
+                  </Typography>
+                </Grid>
+              )}
+
               <Grid
                 container
                 justifyContent="space-between"
                 spacing={3}
                 columnSpacing={4}
                 sx={{
-                  pb: 4,
+                  pb: {xs: 2,md: 4},
+                  pt: {xs: 2,md: 2},
                   borderTop: 1,
                   borderColor: 'grey.middle',
                   background: '#fff',

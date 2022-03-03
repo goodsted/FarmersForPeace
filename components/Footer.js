@@ -1,22 +1,12 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import MuiLink from '@mui/material/Link';
 import Link from 'next/link';
-function Footer({ home }) {
-  return (
-    <AppBar position={home ? 'fixed' : 'static'} component="footer" sx={{ bottom: 0, top: 'unset', height: 'min-content' }}>
-      <Toolbar sx={{ p: 2 }}>
-        <Grid container justifyContent="space-between">
-          <Grid item>
-            <Link href="/terms-and-conditions" passHref>
-            <MuiLink  color="inherit" variant="link">
-              Terms & Conditions
-            </MuiLink>
-            </Link>
-          </Grid>
-          <Grid item>
+import { useMediaQuery } from '@mui/material';
+
+{
+  /* <Grid item>
             <Grid container columnSpacing={3}>
               <Grid item>
                 <Typography variant="link">This site is open source</Typography>
@@ -27,16 +17,32 @@ function Footer({ home }) {
                 </MuiLink>
               </Grid>
             </Grid>
+          </Grid> */
+}
+function Footer({ home }) {
+  const smMatch = useMediaQuery('(max-width:900px)');
+  if (smMatch) return null;
+  return (
+    <AppBar position={home ? 'fixed' : 'static'} component="footer" sx={{ bottom: 0, top: 'unset', height: 'min-content' }}>
+      <Toolbar sx={{ p: 2 }}>
+        <Grid container justifyContent="space-between">
+          <Grid item>
+            <Link href="/terms-and-conditions" passHref>
+              <MuiLink color="inherit" variant="link">
+                Terms & Conditions
+              </MuiLink>
+            </Link>
           </Grid>
+
           <Grid item>
             <Grid container columnSpacing={3}>
               <Grid item>
-                <MuiLink href="#" color="inherit" variant="link">
+                <MuiLink href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
                   Volunteer
                 </MuiLink>
               </Grid>
               <Grid item>
-                <MuiLink href="#" color="inherit" variant="link">
+                <MuiLink href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
                   Contact Us
                 </MuiLink>
               </Grid>

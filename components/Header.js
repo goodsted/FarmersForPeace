@@ -3,15 +3,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Link from 'next/link';
+import InfoDialog from '../components/Info';
+import MobileMenu from '../components/MobileMenu';
 import { useMediaQuery } from '@mui/material';
 function Header({ home }) {
   const smMatch = useMediaQuery('(max-width:900px)');
-  const xsMatch = useMediaQuery('(max-width:600px)');
+  
   return (
     <AppBar
       position="fixed"
@@ -25,22 +25,13 @@ function Header({ home }) {
       <Toolbar sx={{ p: 2, justifyContent: 'space-between' }}>
         {smMatch ? (
           <>
-            <IconButton size="large" edge="start" color="primary" aria-label="menu">
-              <MenuIcon fontSize="large" />
-            </IconButton>
+            <MobileMenu/>
             <Link href="/" passHref>
               <a>
                 <Image src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
               </a>
             </Link>
-            <IconButton size="large" edge="start" color="primary" aria-label="info">
-              <InfoOutlinedIcon fontSize="large" />
-            </IconButton>
-            <Dialog fullWidth fullScreen={true} aria-labelledby="info" scroll="paper" BackdropProps={{invisible: true}} open={false} sx={{mt: 12}}>
-              <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
-                Action for Ukraine
-              </Typography>
-            </Dialog>
+            <InfoDialog/>
           </>
         ) : (
           <Link href="/" passHref>

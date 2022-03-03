@@ -13,7 +13,7 @@ export default function Layout({ children, bgColor}) {
           justifyContent="center"
           sx={{
             height: 'calc(100vh - 64px)',
-            pt: 12,
+            pt: {xs:4,md:12},
             mt: 12,
             overflowY: 'scroll',
           }}
