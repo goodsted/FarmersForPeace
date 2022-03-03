@@ -28,7 +28,7 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <Grid item xs={12} md={6.6}>
+            <Grid item xs={12}  md={6.6}>
               <iframe
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 src="https://www.google.com/maps/d/embed?mid=1TeCb8jRoqNP0e5q8i45_2wjxkPR2Xvq7&ehbc=1E3F86&z=4&ll=50.10205150020149, 14.439702489449177"
@@ -36,7 +36,7 @@ export default function Home() {
                 height="480"
               ></iframe>
             </Grid>
-            <Grid item xs={12} md={5.4} sx={{ pr: 8, pl: 8, pt: { md: 10 }, height: '100%', overflowY: 'scroll' }}>
+            <Grid item xs={12} md={5.4} sx={{ pr: {xs: 2,md:4,lg: 8}, pl: {xs: 2,md:4,lg: 8}, pt: { md: 10 }, height: '100%', overflowY: 'scroll',display:"flex",flexDirection:"column" }}>
               <Grid container sx={{ pb: 4 }}>
                 <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
                   Action for Ukraine

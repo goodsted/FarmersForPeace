@@ -3,6 +3,13 @@ const font = "'Poppins','Roboto', sans-serif";
 const primaryColor = "#1E3F86";
 const Theme = createTheme({
   components:{
+    MuiIconButton: {
+      styleOverrides:{
+        root: {
+          padding: 8,
+        },
+      }
+    },
     MuiButton:{
       styleOverrides:{
         root: {
