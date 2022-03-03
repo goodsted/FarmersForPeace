@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Image from 'next/image'
 function Header() {    
     return (        
-        <AppBar position="static" sx={{
+        <AppBar position="fixed" sx={{
           backgroundColor: "#fff",
           boxShadow: 0,
           borderBottom: 1,

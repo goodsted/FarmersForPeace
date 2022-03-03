@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 function Footer() {    
     return (        
-        <AppBar position="static" component="footer" >
+        <AppBar position="fixed" component="footer" sx={{bottom: 0, top: 'unset', height: 'min-content'}} >
           <Toolbar sx={{p: 2}}>
           <Link href="#" color="inherit" variant="link">Terms & Conditions</Link>
           </Toolbar>

@@ -17,7 +17,14 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Grid container>
+        <Grid container sx={{
+          height:'calc(100vh - 64px)',
+          pt:12,
+          overflowY:'scroll',
+        }}>
+          <Grid container sx={{
+          height:'100%',
+        }}>
           <Grid item xs={12} md={6.6}>
             <iframe
               style={{ width: '100%', height: '100%', border: 'none' }}
@@ -26,7 +33,7 @@ export default function Home() {
               height="480"
             ></iframe>
           </Grid>
-          <Grid item xs={12} md={5.4} sx={{ p: 8, pt: { md: 10 } }}>
+          <Grid item xs={12} md={5.4} sx={{ p: 8, pt: { md: 10 },height:'100%',overflowY:'scroll', }}>
             <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
               Action for Ukraine
             </Typography>
@@ -61,6 +68,7 @@ export default function Home() {
                 </Button>
               </Grid>
             </Grid>
+          </Grid>
           </Grid>
         </Grid>
       </main>
