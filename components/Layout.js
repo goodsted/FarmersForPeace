@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Grid from '@mui/material/Grid';
 
-export default function Layout({ children, bgColor}) {
+export default function Layout({ children, bgColor,wide=false}) {
   return (
     <div>
       <Header />
@@ -18,7 +18,7 @@ export default function Layout({ children, bgColor}) {
             overflowY: 'scroll',
           }}
         >
-          <Grid item xs={11} md={7}>
+          <Grid item xs={11} md={wide?10:7}>
             {children}
           </Grid>
         </Grid>

@@ -82,7 +82,7 @@ const Theme = createTheme({
       color: "#10243E",
     },
     body2:{
-      fontSize: 18,
+      fontSize: 16,
       lineHeight: 2,
       color: "#10243E",
     },
