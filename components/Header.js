@@ -1,6 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
@@ -24,7 +26,7 @@ function Header({ home }) {
         {smMatch ? (
           <>
             <IconButton size="large" edge="start" color="primary" aria-label="menu">
-              <MenuIcon fontSize='large' />
+              <MenuIcon fontSize="large" />
             </IconButton>
             <Link href="/" passHref>
               <a>
@@ -32,8 +34,13 @@ function Header({ home }) {
               </a>
             </Link>
             <IconButton size="large" edge="start" color="primary" aria-label="info">
-              <InfoOutlinedIcon fontSize='large' />
+              <InfoOutlinedIcon fontSize="large" />
             </IconButton>
+            <Dialog fullWidth fullScreen={true} aria-labelledby="info" scroll="paper" BackdropProps={{invisible: true}} open={false} sx={{mt: 12}}>
+              <Typography variant="h1" color="primary" sx={{ mb: 6 }}>
+                Action for Ukraine
+              </Typography>
+            </Dialog>
           </>
         ) : (
           <Link href="/" passHref>
