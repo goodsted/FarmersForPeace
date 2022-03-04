@@ -30,12 +30,12 @@ export default function Info() {
       >
         <InfoOutlinedIcon fontSize="large" />
       </IconButton>
-      <Dialog fullWidth fullScreen={true} aria-labelledby="info" onClose={handleClose} scroll="paper" BackdropProps={{ invisible: true }} open={open}>
-        <Grid container sx={{ pr: 3, pl: 3, pt: 2, pb: 2, borderBottom: 1, borderColor: 'grey.middle' }} justifyContent="space-between">
-          <div style={{ width: 39 }}></div>
+      <Dialog fullWidth fullScreen={true} aria-labelledby="info" onClose={handleClose} scroll="paper" BackdropProps={{ invisible: true }} open={open} >
+        <Grid container sx={{ pr: 2, pl: 2, pt: 2, pb: 2, borderBottom: 1, borderColor: 'grey.middle' }} justifyContent="space-between">
+          <div style={{ width: 42 }}></div>
           <Link href="/" passHref>
-            <a>
-              <Image src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
+            <a style={{display: 'flex'}}>
+              <Image style={{display: 'flex'}} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
             </a>
           </Link>
           <IconButton

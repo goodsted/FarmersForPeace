@@ -36,6 +36,7 @@ export default function MobileMenu() {
         onClick={() => {
           handleOpen();
         }}
+        sx={{pl:2}}
       >
         <MenuIcon fontSize="large" />
       </IconButton>
@@ -54,17 +55,17 @@ export default function MobileMenu() {
           </IconButton>
 
           <Link href="/" passHref>
-            <a>
-              <Image src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
+            <a style={{display: 'flex'}}>
+              <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
             </a>
           </Link>
-          <div style={{ width: 39 }}></div>
+          <div style={{ width: 32 }}></div>
         </Grid>
         <Grid container flexDirection="column" sx={{ p: 3, bgcolor: 'primary.main', height: '100%' }}>
           {menu.map((item, index) => {
             if(item.external){
               return (
-                  <a href={item.link} style={{ textDecoration: 'none' }}>
+                  <a href={item.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                     <Typography variant="link" sx={menuLinkStyle}>
                     {item.text}
                     </Typography>

@@ -28,15 +28,15 @@ function Header({ home }) {
             <MobileMenu/>
             <Link href="/" passHref>
               <a>
-                <Image src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
+                <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
               </a>
             </Link>
             <InfoDialog/>
           </>
         ) : (
           <Link href="/" passHref>
-            <a>
-              <Image src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={303} height={68} />
+            <a style={{display: 'flex'}}>
+              <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={303} height={68} />
             </a>
           </Link>
         )}

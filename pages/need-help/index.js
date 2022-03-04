@@ -1,6 +1,8 @@
 
 import Typography from '@mui/material/Typography';
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
+import Grid from '@mui/material/Grid';
+
 
 export default function NeedHelpPage() {
   return (
@@ -13,7 +15,9 @@ export default function NeedHelpPage() {
         agriculture.
       </Typography>
 
-      <iframe
+      
+      <Grid sx={{ display: { xs: 'none', md: 'initial' } }}>
+        <iframe
         style={{ width: '100%' }}
         src="https://docs.google.com/forms/d/e/1FAIpQLScmeoaNA02WPzID-Zrsn1PLuVMC3xorie20eqY2LskDTTKQUg/viewform?embedded=true"
         width="700"
@@ -24,6 +28,20 @@ export default function NeedHelpPage() {
       >
         Loading…
       </iframe>
+      </Grid>
+      <Grid sx={{ display: { xs: 'initial', md: 'none' } }}>
+      <iframe
+        style={{ width: '100%' }}
+        src="https://docs.google.com/forms/d/e/1FAIpQLScmeoaNA02WPzID-Zrsn1PLuVMC3xorie20eqY2LskDTTKQUg/viewform?embedded=true"
+        width="700"
+        height="2300"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+      >
+        Loading…
+      </iframe>
+      </Grid>
     </Layout>
   );
 }

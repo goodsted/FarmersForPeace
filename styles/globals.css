@@ -13,3 +13,9 @@ a {
 * {
   box-sizing: border-box;
 }
+@media (max-width:600px){
+  .host-iframe{
+    height: 2400px !important;
+  }
+}
+

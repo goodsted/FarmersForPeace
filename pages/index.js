@@ -13,7 +13,7 @@ export default function Home() {
     pl: { xs: 0, md: 4, lg: 8 },
     pt: { md: 4 },
     height: { xs: 'auto', md: '100%' },
-    overflowY: 'scroll',
+    overflowY: 'auto',
     display: 'flex',
     flexDirection: 'column',
     position: {
@@ -41,7 +41,7 @@ export default function Home() {
           sx={{
             height: { xs: '100vh', md: 'calc(100vh - 64px)' },
             pt: 12.5,
-            overflowY: 'scroll',
+            overflowY: 'auto',
           }}
         >
           <Grid
@@ -59,8 +59,7 @@ export default function Home() {
               ></iframe>
             </Grid>
             <Grid item xs={12} md={5.4} sx={rightColumn}>
-              {!smMatch && (
-                <Grid container sx={{ pb: 2.5 }}>
+                <Grid container sx={{ pb: 2.5,display: {xs:'none',md:'initial'} }}>
                   <Typography variant="h1" color="primary" sx={{ mb: 2 }}>
                     Action for Ukraine
                   </Typography>
@@ -75,19 +74,18 @@ export default function Home() {
                     If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&apos;ll appear on the map for those looking to find a safe space.
                   </Typography>
                 </Grid>
-              )}
+              
 
               <Grid
                 container
                 justifyContent="space-between"
-                spacing={3}
+                spacing={smMatch ? 0 : 3}
                 columnSpacing={smMatch ? 2 : 4}
                 sx={{
                   pb: { xs: 2, md: 4 },
                   pt: { xs: 2, md: 2 },
                   pl:{xs: 2,md:0},
                   pr:{xs: 2,md:0},
-                  
                   borderTop: 1,
                   borderColor: 'grey.middle',
                   background: '#fff',
@@ -96,6 +94,7 @@ export default function Home() {
                     md: 'sticky',
                   },
                   bottom: 0,
+                  mt:{xs: 'auto'}
                 }}
               >
                 <Grid item xs={6}>
