@@ -24,7 +24,7 @@ export default function Layout({ children, bgColor,wide=false}) {
             height: 'calc(100vh - 64px)',
             pt: {xs:4,md:12},
             mt: 12,
-            overflowY: 'scroll',
+            overflowY: 'auto',
           }}
         >
           <Grid item xs={11} md={wide?10:7}>

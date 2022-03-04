@@ -2,23 +2,11 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
 import MuiLink from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import { useMediaQuery } from '@mui/material';
 
-{
-  /* <Grid item>
-            <Grid container columnSpacing={3}>
-              <Grid item>
-                <Typography variant="link">This site is open source</Typography>
-              </Grid>
-              <Grid item>
-                <MuiLink href="#" color="inherit" variant="link">
-                  Contribute
-                </MuiLink>
-              </Grid>
-            </Grid>
-          </Grid> */
-}
+
 function Footer({ home }) {
   const smMatch = useMediaQuery('(max-width:900px)');
   if (smMatch) return null;
@@ -33,6 +21,19 @@ function Footer({ home }) {
               </MuiLink>
             </Link>
           </Grid>
+          {/* unfo for open source link */}
+          {/* <Grid item>
+            <Grid container columnSpacing={3}>
+              <Grid item>
+                <Typography variant="link">This site is open source</Typography>
+              </Grid>
+              <Grid item>
+                <MuiLink href="https://github.com/goodsted/FarmersForPeace" target="_blank" color="inherit" variant="link">
+                  Contribute
+                </MuiLink>
+              </Grid>
+            </Grid>
+          </Grid> */}
 
           <Grid item>
             <Grid container columnSpacing={3}>

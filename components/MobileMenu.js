@@ -19,12 +19,12 @@ export default function MobileMenu() {
     setOpen(false);
   };
   const menu = [
-      { link: '/host', text: 'I want to host',external:false },
-      { link: '/need-help', text: 'I need help',external:false },
-      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external:true,text: 'Volunteer' },
-      { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external:true,text: 'Contact Us' },
-      { link: '/terms-and-conditions', text: 'Terms & Conditions' }
-];
+    { link: '/host', text: 'I want to host', external: false },
+    { link: '/need-help', text: 'I need help', external: false },
+    { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external: true, text: 'Volunteer' },
+    { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external: true, text: 'Contact Us' },
+    { link: '/terms-and-conditions', text: 'Terms & Conditions' },
+  ];
   const menuLinkStyle = { textDecoration: 'none', color: '#fff', fontSize: 28, fontWeight: 700, lineHeight: '68px', fontFamily: "'Pragati Narrow',sans-serif" };
   return (
     <>
@@ -36,7 +36,7 @@ export default function MobileMenu() {
         onClick={() => {
           handleOpen();
         }}
-        sx={{pl:2}}
+        sx={{ pl: 2 }}
       >
         <MenuIcon fontSize="large" />
       </IconButton>
@@ -55,7 +55,7 @@ export default function MobileMenu() {
           </IconButton>
 
           <Link href="/" passHref>
-            <a style={{display: 'flex'}}>
+            <a style={{ display: 'flex' }}>
               <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
             </a>
           </Link>
@@ -63,26 +63,38 @@ export default function MobileMenu() {
         </Grid>
         <Grid container flexDirection="column" sx={{ p: 3, bgcolor: 'primary.main', height: '100%' }}>
           {menu.map((item, index) => {
-            if(item.external){
+            if (item.external) {
               return (
-                  <a href={item.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                    <Typography variant="link" sx={menuLinkStyle}>
+                <a href={item.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+                  <Typography variant="link" sx={menuLinkStyle}>
                     {item.text}
-                    </Typography>
-                  </a>
+                  </Typography>
+                </a>
               );
-            }else{
+            } else {
               return (
                 <Link href={item.link} key={index} passHref>
                   <a style={{ textDecoration: 'none' }}>
                     <Typography variant="link" sx={menuLinkStyle}>
-                    {item.text}
+                      {item.text}
                     </Typography>
                   </a>
                 </Link>
               );
             }
           })}
+          {/* unfo for open source link */}
+
+          {/* <Typography variant="link" style={{ fontSize: 20, fontWeight: 500 }} sx={menuLinkStyle}>
+            This site is open source{' '}
+            <Link href="https://github.com/goodsted/FarmersForPeace" target="_blank" rel="noreferrer" passHref>
+              <a style={{ textDecoration: 'none' }}>
+                <Typography variant="link" style={{ fontSize: 20, fontWeight: 500, textDecoration: 'underline' }} sx={menuLinkStyle}>
+                  Contribute
+                </Typography>
+              </a>
+            </Link>
+          </Typography> */}
         </Grid>
       </Dialog>
     </>
