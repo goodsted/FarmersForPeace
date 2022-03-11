@@ -21,8 +21,7 @@ function Footer({ home }) {
               </MuiLink>
             </Link>
           </Grid>
-          {/* unfo for open source link */}
-          {/* <Grid item>
+          <Grid item>
             <Grid container columnSpacing={3}>
               <Grid item>
                 <Typography variant="link">This site is open source</Typography>
@@ -33,7 +32,7 @@ function Footer({ home }) {
                 </MuiLink>
               </Grid>
             </Grid>
-          </Grid> */}
+          </Grid>
 
           <Grid item>
             <Grid container columnSpacing={3}>

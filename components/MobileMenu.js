@@ -19,6 +19,7 @@ export default function MobileMenu() {
     setOpen(false);
   };
   const menu = [
+    { link: '/about', text: 'About', external: false },
     { link: '/host', text: 'I want to host', external: false },
     { link: '/need-help', text: 'I need help', external: false },
     { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external: true, text: 'Volunteer' },
@@ -41,7 +42,7 @@ export default function MobileMenu() {
         <MenuIcon fontSize="large" />
       </IconButton>
       <Dialog fullWidth fullScreen={true} aria-labelledby="info" onClose={handleClose} scroll="paper" BackdropProps={{ invisible: true }} open={open}>
-        <Grid container sx={{ pr: 3, pl: 3, pt: 2, pb: 2, borderBottom: 1, borderColor: 'grey.middle' }} justifyContent="space-between">
+        <Grid container sx={{ pr: 3, pl: 3, pt: 2, pb: 3, borderBottom: 1, borderColor: 'grey.middle' }} justifyContent="space-between">
           <IconButton
             size="large"
             edge="start"
@@ -50,6 +51,7 @@ export default function MobileMenu() {
             onClick={() => {
               handleClose();
             }}
+            sx={{ pl: 2 }}
           >
             <CloseIcon fontSize="large" />
           </IconButton>
@@ -83,9 +85,8 @@ export default function MobileMenu() {
               );
             }
           })}
-          {/* unfo for open source link */}
 
-          {/* <Typography variant="link" style={{ fontSize: 20, fontWeight: 500 }} sx={menuLinkStyle}>
+          <Typography variant="link" style={{ fontSize: 20, fontWeight: 500 }} sx={menuLinkStyle}>
             This site is open source{' '}
             <Link href="https://github.com/goodsted/FarmersForPeace" target="_blank" rel="noreferrer" passHref>
               <a style={{ textDecoration: 'none' }}>
@@ -94,7 +95,7 @@ export default function MobileMenu() {
                 </Typography>
               </a>
             </Link>
-          </Typography> */}
+          </Typography>
         </Grid>
       </Dialog>
     </>
