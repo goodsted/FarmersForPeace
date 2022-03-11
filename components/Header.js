@@ -11,7 +11,7 @@ import MobileMenu from '../components/MobileMenu';
 import { useMediaQuery } from '@mui/material';
 function Header({ home }) {
   const smMatch = useMediaQuery('(max-width:900px)');
-  
+
   return (
     <AppBar
       position="fixed"
@@ -22,20 +22,20 @@ function Header({ home }) {
         borderColor: 'grey.middle',
       }}
     >
-      <Toolbar sx={{ p: 2, justifyContent: 'space-between' }}>
+      <Toolbar sx={{ pr: 3, pl: 3, pt: 2, pb: 2, borderBottom: 1, borderColor: 'grey.middle', justifyContent: 'space-between' }}>
         {smMatch ? (
           <>
-            <MobileMenu/>
+            <MobileMenu />
             <Link href="/" passHref>
               <a>
                 <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={217} height={55} />
               </a>
             </Link>
-            <InfoDialog/>
+            <div style={{ width: 32 }}></div>
           </>
         ) : (
           <Link href="/" passHref>
-            <a style={{display: 'flex'}}>
+            <a style={{ display: 'flex' }}>
               <Image priority={true} src="/farmersforpeace-logo.svg" alt="Farmers for Peace Logo" width={303} height={68} />
             </a>
           </Link>
