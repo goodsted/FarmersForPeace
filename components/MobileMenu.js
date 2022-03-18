@@ -68,7 +68,7 @@ export default function MobileMenu() {
           {menu.map((item, index) => {
             if (item.external) {
               return (
-                <a href={item.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+                <a href={item.link} key={index} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                   <Typography variant="link" sx={menuLinkStyle}>
                     {item.text}
                   </Typography>
