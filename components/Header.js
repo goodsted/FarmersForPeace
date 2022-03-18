@@ -1,12 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Link from 'next/link';
-import InfoDialog from '../components/Info';
 import MobileMenu from '../components/MobileMenu';
 import { useMediaQuery } from '@mui/material';
 function Header({ home }) {
@@ -19,10 +15,10 @@ function Header({ home }) {
         backgroundColor: '#fff',
         boxShadow: 0,
         borderBottom: 1,
-        borderColor: 'grey.middle',
+        borderColor: 'grey.xs',
       }}
     >
-      <Toolbar sx={{ pr: 3, pl: 3, pt: 2, pb: 2, borderBottom: 1, borderColor: 'grey.middle', justifyContent: 'space-between' }}>
+      <Toolbar sx={{ pr: 3, pl: 3, pt: 2, pb: 2, justifyContent: 'space-between' }}>
         {smMatch ? (
           <>
             <MobileMenu />

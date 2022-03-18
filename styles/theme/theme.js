@@ -52,7 +52,8 @@ const Theme = createTheme({
       main: '#1E3F86',
     },
     grey:{
-      middle: "#CECECE",
+      xs: "#CECECE",
+      sm: "#727374",
     }
   },
   typography:{

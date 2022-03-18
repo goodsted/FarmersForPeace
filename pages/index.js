@@ -103,7 +103,7 @@ export default function Home() {
                   pl: { xs: 2, md: 0 },
                   pr: { xs: 2, md: 0 },
                   borderTop: 1,
-                  borderColor: 'grey.middle',
+                  borderColor: 'grey.xs',
                   background: '#fff',
                   position: {
                     xs: 'unset',

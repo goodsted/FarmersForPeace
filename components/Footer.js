@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import { useMediaQuery } from '@mui/material';
 
-
 function Footer({ home }) {
   const smMatch = useMediaQuery('(max-width:900px)');
   if (smMatch) return null;
@@ -40,6 +39,13 @@ function Footer({ home }) {
                 <MuiLink target="_blank" href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">
                   Volunteer
                 </MuiLink>
+              </Grid>
+              <Grid item>
+                <Link href="/faq" passHref>
+                  <MuiLink color="inherit" variant="link">
+                    FAQ
+                  </MuiLink>
+                </Link>
               </Grid>
               <Grid item>
                 <MuiLink target="_blank" href="https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk" color="inherit" variant="link">

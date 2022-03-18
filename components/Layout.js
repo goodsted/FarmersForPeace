@@ -21,8 +21,8 @@ export default function Layout({ children, bgColor,wide=false}) {
           alignContent="flex-start"
           justifyContent="center"
           sx={{
-            height: 'calc(100vh - 64px)',
             pt: {xs:4,md:12},
+            pb: {xs:4,md:12},
             mt: 12,
             overflowY: 'auto',
           }}

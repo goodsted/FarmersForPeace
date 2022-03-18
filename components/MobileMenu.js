@@ -23,6 +23,7 @@ export default function MobileMenu() {
     { link: '/host', text: 'I want to host', external: false },
     { link: '/need-help', text: 'I need help', external: false },
     { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external: true, text: 'Volunteer' },
+    { link: '/faq', text: 'FAQ', external: false },
     { link: 'https://www.goodsted.com/group/farmers-for-peace/cl0b3o7d3kldq01061gzd1qlk', external: true, text: 'Contact Us' },
     { link: '/terms-and-conditions', text: 'Terms & Conditions' },
   ];
@@ -42,7 +43,7 @@ export default function MobileMenu() {
         <MenuIcon fontSize="large" />
       </IconButton>
       <Dialog fullWidth fullScreen={true} aria-labelledby="info" onClose={handleClose} scroll="paper" BackdropProps={{ invisible: true }} open={open}>
-        <Grid container sx={{ pr: 3, pl: 3, pt: 2, pb: 3, borderBottom: 1, borderColor: 'grey.middle' }} justifyContent="space-between">
+        <Grid container sx={{ pr: 3, pl: 3, pt: 2, pb: 3, borderBottom: 1, borderColor: 'grey.xs' }} justifyContent="space-between">
           <IconButton
             size="large"
             edge="start"
