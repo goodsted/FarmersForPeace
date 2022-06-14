@@ -5,10 +5,11 @@ import { Grid, Typography, Button } from '@mui/material';
 import Link from 'next/link';
 import { useMediaQuery } from '@mui/material';
 import Script from 'next/script';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation();
   const smMatch = useMediaQuery('(max-width:900px)');
-  const xsMatch = useMediaQuery('(max-width:600px)');
   const rightColumn = {
     pr: { xs: 0, md: 4, lg: 8 },
     pl: { xs: 0, md: 4, lg: 8 },
@@ -27,10 +28,7 @@ export default function Home() {
   };
   return (
     <div>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=UA-222104013-1"
-        strategy="afterInteractive"
-      />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-222104013-1" strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -77,20 +75,18 @@ export default function Home() {
                   Action for Ukraine
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 2 }}>
-                  A lot of people may need to leave Ukraine in the near future and all of them need a place to stay, an activity to do and most of all loving human connections.
+                  {t('HomeInfoParagraph1')}
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 2 }}>
-                  At the same time, a lot of European farmers suffer from loneliness due to their often remote locations and they also often have trouble to find helping hands, especially in the
-                  upcoming spring season.
+                  {t('HomeInfoParagraph2')}
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 2 }}>
-                  If there are farmers which are willing to host refugees from Ukraine, submit your interest and you&apos;ll appear on the map for those looking to find a safe space.
+                  {t('HomeInfoParagraph3')}
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 2 }}>
-                  If you are not a farmer but still would like to host refugees, you can also take part!
+                  {t('HomeInfoParagraph4')}
                 </Typography>
               </Grid>
-
 
               <Grid
                 container
@@ -110,7 +106,7 @@ export default function Home() {
                     md: 'sticky',
                   },
                   bottom: 0,
-                  mt: { xs: 'auto' }
+                  mt: { xs: 'auto' },
                 }}
               >
                 <Grid item xs={6}>

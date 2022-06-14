@@ -7,8 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Info() {
+  const { t } = useTranslation();
     const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -55,6 +58,7 @@ export default function Info() {
             Action for Ukraine
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
+          {t('MainInfo')}
             A lot of people may need to leave Ukraine in the near future and all of them need a place to stay, an activity to do and most of all loving human connections.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
